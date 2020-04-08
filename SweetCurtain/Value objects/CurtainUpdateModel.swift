@@ -35,6 +35,7 @@ internal class CurtainUpdateModel: Curtain {
     var movingDuration: TimeInterval = 0.4
     var topBounce: Bool = true
     var bottomBounce: Bool = true
+    var panGestureEnabled: Bool = true
     var showsHandleIndicator: Bool = true {
         willSet { curtainController.curtainShowsHandleIndicator = newValue }
     }

@@ -224,6 +224,7 @@ private extension CurtainController {
     }
     
     @objc func pan(_ gesture: UIPanGestureRecognizer) {
+        if(!curtain.panGestureEnabled){return;}
         switch gesture.state {
         case .ended, .cancelled:
             curtainDelegate?.curtainDidEndDragging(curtain)
@@ -241,6 +242,7 @@ private extension CurtainController {
     }
     
     @objc func scroll(_ gesture: UIPanGestureRecognizer) {
+        if(!curtain.panGestureEnabled){return;}
         guard let scrollView = topMostScrollView else { return }
         
         let yVelocity = gesture.velocity(in: view).y

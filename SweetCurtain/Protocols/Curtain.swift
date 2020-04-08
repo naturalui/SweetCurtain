@@ -44,7 +44,8 @@ public protocol Curtain {
     var heightCoefficient: CGFloat { get }
     ///The current value that describes the curtain actual height.
     var actualHeight: CGFloat { get }
-    
+    ///Allows user to disable the pan gesture logic (useful when showing maps in a curtain)
+    var panGestureEnabled: Bool { get set }
 }
 
 public extension Curtain {
